@@ -1,0 +1,197 @@
+<html>
+    <head>
+        <title>Informatik</title> 
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> 
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!linker til CSS fanen nedenunder>
+    </head>
+<body>
+<section id="nav-bar">
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Kriwats Fades</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav" ml-auto>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Forside<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Om os</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Priser</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Kontakt</a>
+      </li>
+    </ul>
+      
+<input type="text" id="searchField" placeholder="...">
+<button id="myBtn" type="button" onclick="mySearchFunction()"><img src="https://cdn.pixabay.com/photo/2013/07/12/12/34/magnifying-glass-145942_1280.png" height="23" width="23"></button>
+
+  </div>
+        <p id="result">Søgeresultat:</p>
+</nav>
+</section> 
+   
+    <!--------------------banner----------------->
+
+<div class="main">
+    
+<section id="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="promo-title">KRIWATS FADES</p> 
+               
+               
+            </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/fade%20(2).jpg" style="max-width: 100%;" class="yogalady"> 
+                </div>
+        </div>
+    </div>
+</section>
+
+     <!--------------------ydelser----------------->
+    
+<section id="ydelser">
+    <!vi bruger id her, fordi dette skal gælde denne specifikke sektion>
+    
+    <div class="container text-center">
+        <h1 class="ydelser-titel">Anmeldelser</h1>
+        <!HTML tagget h1 bekriver hvad der er vigtigst af de forskellige h tags>
+        <div class="row text-center">
+    
+            <div class="col-md-4 ydelser">    
+                <!skriver class, fordi det indikerer at man skriver i CSS, og gælder styling for flere div, altså alle dem med class.> 
+                <img src="images/fade%20(1).jpg" class="ydelser-img">
+                <h4>Sam Yong Thin Tuep</h4>
+                <p class="citat">"Johan er glad og smilende. Altid klar til at gøre dit hår til kunst"</p> 
+            </div>
+            <div class="col-md-4 ydelser">
+                <img src="images/fade%20(3).jpg" class="ydelser-img">
+                <!src= der hvor URL skal være>
+                <h4>Emil Fyhn</h4>
+                <p class="citat">"En brandvarm fade! Fed butik og fede omgivelser"</p> 
+            </div>
+
+            <div class="col-md-4 ydelser">    
+                <img src="images/fade%20(1).png" class="ydelser-img">
+                <!seperator tag>
+                <h4>Johannes Køtlum</h4>
+                <p class="citat">"Den her fade, Den kan jeg teknisk set godt lide"</p> 
+            </div>    
+        </div>
+      
+    </div> 
+</section>
+    
+    
+<section id="footer">
+      <div class="container text-center">
+            <!div markerer et område i html>
+        
+        <button type="button" class="btn btn-primary">Kontakt os</button>
+<!btn-primary er farven>
+    </div> 
+    
+</section>
+    <!containtertag>
+    <section id="credits">
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!indeholder metadata om HTML dokumentet, bliver ikke vist, men kan bruges af browsers til at reloade side osv. >
+<!>
+</body>
+    
+<div class="footer">
+<p>Kriwats Fades</p>
+    <p>Kalekovej 7 5600 Faaborg</p>
+    <p>TLF +18004861078</p>
+    <p>johan.kriwat@gmail.com</p>
+</div>
+    
+</section>
+    
+</div>
+    
+    
+</body>
+    <script>
+function mySearchFunction() {
+var searchText = document.getElementById('searchField').value;
+var resultText = "";
+if (searchText == "w3school") {
+	resultText = "Free Web Building Tutorials!";
+          resultText = resultText.link("https://www.w3schools.com");
+}
+else if ((searchText == "dr") || (searchText == "dr2")) {
+	resultText = "Danmarks Radio";
+          resultText = resultText.link("https://www.dr.dk");
+}
+else if ((searchText == "Kriwats fades") || (searchText == "kriwat") || (searchText == "fade") || (searchText == "fades") || (searchText == "frisør") || (searchText == "klip")) {
+	resultText = "Kriwats fades - brandvarme fades i Faaborg";
+          resultText = resultText.link("https://dazedimg-dazedgroup.netdna-ssl.com/830/azure/dazed-prod/1150/0/1150228.jpg");
+}
+else if ((searchText == "porn") || (searchText == "porno") || (searchText == "pornhub") || (searchText == "jesus")) {
+	resultText = "www.pornhub.com/community/hotfyr19";
+          resultText = resultText.link("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b3c4b20e-f73b-4462-beb9-35d192fdac5b/d16kq3v-0ce975fb-a670-4cb7-bb9c-1ceb09b39464.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2IzYzRiMjBlLWY3M2ItNDQ2Mi1iZWI5LTM1ZDE5MmZkYWM1YlwvZDE2a3Ezdi0wY2U5NzVmYi1hNjcwLTRjYjctYmI5Yy0xY2ViMDliMzk0NjQuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Xn1lfUm9SV1rkGoV2h88ZXfSGDIFoUcA3C7vnyI7hCg");
+}
+else {
+	resultText = "Du skal jo søge på noget din idiot...";
+}
+document.getElementById("result").innerHTML = "Søgeresultat: " + resultText;
+}
+var input = document.getElementById("searchField");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+</script>
+
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
