@@ -1,0 +1,19 @@
+html {
+    background: #4936cf;
+}
+
+body {  
+    background: #4936cf;
+    box-shadow: #4936cf;
+    color: #f9ca24;
+    font-family: "Cabilbri", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+a {
+    color: ##4936cf;
+}
+
