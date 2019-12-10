@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: footer; }
+.item5 { grid-area: search; }
+ 
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: ;
+}
+ 
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+li a:hover {
+  background-color:#2196F3;
+  color: white;
+}
+   
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header search'
+    'menu main main main main main'
+    'menu footer footer footer footer footer';
+  grid-gap: 5px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+ 
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+ 
+<div class="grid-container">
+  <div class="item1">Bimmers burger bar</div>
+    <div class="item5">
+    <p id="result">Søgemaskine</p>
+<input type="text" id="searchField" placeholder="Bimmers burger bar">
+<button type="button" onclick="mySearchFunction()">Søg</button>
+    </div>
+  <div class="item2">
+    <ul>
+  <li><a href="Home">Velkommen</a></li>
+  <li><a href="#news">Burger og vin</a></li>
+  <li><a href="#contact">Resevation</a></li>
+  <li><a href="#about">Take away</a></li>
+  <li><a href="#about">Kontakt</a></li>
+</ul>
+    </div>
+  <div class="item3">Main</div>  
+  <div class="item4">Footer</div>
+</div>
+ 
+ <script>
+function mySearchFunction() {
+var searchText = document.getElementById('searchField').value;
+var resultText = "";
+if (searchText == "Mad") {
+    resultText = "Mad wiki";
+    resultText = resultText.link("https://da.wikipedia.org/wiki/Mad");
+}
+else if (searchText == "Burger") {
+    resultText = "Lækre burgere";
+    resultText = resultText.link("https://www.valdemarsro.dk/burger/");
+}
+else {
+    resultText = "Du fandt ikke noget! Prøv igen.";
+}
+document.getElementById("result").innerHTML = "Resultat: " + resultText;
+}
+</script>  
+   
+   
+</body>
+</html>
