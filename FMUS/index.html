@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/*Hvilke rum skal der være i Grid: */
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item5 { grid-area: footer; }
+
+
+/* Layout af Grid: */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'main main main main main main'
+    'menu menu menu footer footer footer'
+    'menu menu menu footer footer footer';
+  grid-gap: 5px;
+  background-color: rgb(100,100,200);
+  padding: 10px;
+}
+
+
+/* elementer i Grid-rum: */
+.grid-container > div {
+  background-color: rgb(1, 255, 255);
+  text-align: center;
+  padding: 0px 0px;
+  font-size: 20px;
+
+}
+
+/* links i menu */
+li a {
+  display: block;
+  color: rgb(0,0,0);
+  padding: 2px 2px;
+  text-decoration: none;
+}
+
+/* mus over menu-punkt:  */
+li a:hover {
+  background-color: rgb(255,0,0);
+  color: rgb(255,255,255);
+}
+
+/* Kun footeren:  */
+#myFooter {
+	background-color: rgb(1,255,255);
+}
+
+table, td {
+	border : 5px solid black
+}
+
+   
+</style>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="item1">FMUS
+    <!-- Header-indhold her -->
+    
+        <p id="result">Resultat:</p>
+        <input type="text" id="searchField" placeholder="indtast søgeord">
+        <button type="button" onclick="mySearchFunction()">søg</button>
+
+    </div>
+  <div class="item2"> 
+  <!-- Menu-indhold her --> 
+   <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjM8cvGzKHmAhXfAxAIHdlOA5MQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.facebook.com%2Fsvendborgungdomsskole%2Fposts%2F10156360879697358%3Fcomment_tracking%3D%257B%2522tn%2522%253A%2522O%2522%257D&psig=AOvVaw3QrqdzoxUaB8d5aWtz4b9N&ust=1575741469737867" width="100%" height="300">
+  </div>
+   
+<!-- Main: -->
+  <div class="item3">
+      <!-- Main-indhold her -->
+<table width="100%">
+	<tr><td><li><a href="https://www.fmus.dk/Forside">Forside</a></li></td><td><li><a href="https://www.fmus.dk/Ungdomsr%C3%A5d">Om os</a></li></td><td><li><a href="https://www.fmus.dk/Billeder">Billeder</a></li></td><td><li><a href="https://www.fmus.dk/Kontakt">Kontakt</a></li></td></tr>
+</table>
+</div>
+
+<div class="item5"> 
+      <!-- Main-indhold her -->
+         <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmigogodense.dk%2Fwp-content%2Fuploads%2F2018%2F05%2FHavnepladsen-800x480.jpg&imgrefurl=https%3A%2F%2Fmigogodense.dk%2Fsaa-meget-sker-der-til-havnekulturfestival-2019%2F&docid=2MIDLISPJah7yM&tbnid=HY3i-30mvrw97M%3A&vet=10ahUKEwjoqr-7zaHmAhVxwsQBHW-4ArAQMwhAKAMwAw..i&w=800&h=480&bih=722&biw=1536&q=odense%20havnekulturfestival&ved=0ahUKEwjoqr-7zaHmAhVxwsQBHW-4ArAQMwhAKAMwAw&iact=mrc&uact=8" width="100%" height="300">   
+</div>
+
+<script>
+function mySearchFunction() {
+var searchText = document.getElementById('searchField').value;
+var resultText = "";
+if (searchText == "Billeder") {
+	resultText = "GoKart fynsmesterskab";
+  	resultText = resultText.link("https://www.fmus.dk/Billeder/Fynsmesterskab---Faaborg-VANDT!!");
+}
+else if ((searchText == "Forside") || (searchText == "faaborg-midtfyn ungdomsskole")) {
+	resultText = "FMUS forside";
+  	resultText = resultText.link("https://www.fmus.dk/Forside");
+}
+else if (searchText == "Kontakt") {
+	resultText = "Kontakt os her";
+  	resultText = resultText.link("https://www.fmus.dk/Kontakt");
+}
+else if (searchText == "Om os") {
+	resultText = "Elevrådet";
+  	resultText = resultText.link("https://www.fmus.dk/Ungdomsr%C3%A5d");
+}
+else {
+	resultText = "ikke fundet";
+}
+document.getElementById("result").innerHTML = "Resultat: " + resultText;
+}
+</script>
+
+</body>
+</html>
+
