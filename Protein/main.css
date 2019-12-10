@@ -1,0 +1,114 @@
+/* CSS START */ 
+
+/* Style på menu */ 
+    
+
+
+
+
+/*Hvilke rum skal der være i Grid: */ 
+    
+
+
+.item1 { grid-area: header;} 
+
+.item2 { grid-area: menu; } 
+
+.item3 { grid-area: main; } 
+
+.item5 { grid-area: footer; } 
+
+    .item6
+{
+    grid-area: box1;
+}
+    .item7{grid-area: box2;}
+    .item8{grid-area: box3;}
+
+ 
+
+/* Layout af Grid: */ 
+
+.grid-container { 
+
+  display: grid; 
+
+  grid-template-areas: 
+
+    'header header header header header header' 
+
+    'menu menu menu menu menu menu'
+      
+      'main main main main main main'
+
+    'footer footer footer footer footer footer' 
+    'box1 box1 box2 box2 box3 box3';
+
+  grid-gap: 10px; 
+
+  background-color: rgb(169,169,169); 
+
+
+
+} 
+
+ 
+
+/* elementer i Grid-rum: */ 
+
+.grid-container > div { 
+
+  background-color: rgb(0, 0, 0); 
+
+
+
+  padding: 20px 20px; 
+
+  font-size: 20px; 
+
+        } 
+
+/* lister */ 
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #FFE100;
+}
+ 
+
+/* Kun footeren:  */ 
+
+#myFooter { 
+
+background-color: black; 
+
+} 
+
+#menu{background-color: yellow; padding: 0;}
+
+
+#box1 {
+    
+    background-color: white
+}
+
+/* SLUT PÅ CSS */    
